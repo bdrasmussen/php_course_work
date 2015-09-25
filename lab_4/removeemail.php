@@ -44,7 +44,7 @@
   mysqli_close($dbc);
 ?>
 
-    <input type="submit" name="Remove" value="Remove" />
+    <input type="submit" name="submit" value="Remove" />
   </form>
 </body>
 </html>
