@@ -23,14 +23,28 @@
     $adverb = $_POST['adverb'];
     $output_form = false;
 
-  $dbc = mysqli_connect('localhost', 'bdrasmussen', 'root', 'manlibs')
-    or die('Error connecting to MySQL server.');
+     $dbc = mysqli_connect('localhost', 'bdrasmussen', 'root', 'manlibs')
+       or die('Error connecting to MySQL server.');
     
 
-  
-  $query = "INSERT INTO madlibs (noun, verb, adj, adverb)  VALUES ('$noun', '$verb', '$adj', '$adverb')";
-  mysqli_query($dbc, $query)
-    or die('Error querying database.');
+  if((!empty($noun)) && (!empty($verb)) && (!empty($adj)) && (!empty($adverb)))
+  {
+    $query = "INSERT INTO madlibs (noun, verb, adj, adverb)  VALUES ('$noun', '$verb', '$adj', '$adverb')";
+    mysqli_query($dbc, $query)
+      or die('Error querying database.');
+    
+  } 
+    $query1 = "SELECT * FROM madlibs";
+    $result = mysqli_query($dbc, $query1);
+    while ($row = mysqli_fetch_array($result)) 
+    {
+      echo 'Do you ' . $row['verb'] . ' your ' . $row['adj'] . ' ' . $row['noun'] . ' ' . $row['adverb'] . "? That's hilarious!";
+     /* echo $row['noun'];
+      echo ' ' . $row['verb'];
+      echo ' ' . $row['adj'];
+      echo ' ' . $row['adverb']; */
+      echo '<br />';
+    }
 
 
 
