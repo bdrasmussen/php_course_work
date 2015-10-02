@@ -43,7 +43,28 @@ else
 {
   $output_form = true;
 }
+  if((!empty($noun)) && (!empty($verb)) && (!empty($adj)) && (!empty($adverb)))
+  {
+    $rowcount = "select count(*) + 1 from madlibs";
+    mysqli_query($dbc, $rowcount)
+      or die('Error querying database row.');
+      $rowcount = mysqli_fetch_array($rowcount);
+   // echo $rowcount;  
+    $query = "insert into madlibs(madlib_sk, noun, verb, adj, adverb) values ('$rowcount','$noun', '$verb', '$adj', '$adverb');";
     
+    mysqli_query($dbc, $query)
+      or die('Error querying database.');
+    $output_form = true;
+   
+    $query1 = "select * from madlibs order by madlib_sk desc;";
+    $result = mysqli_query($dbc, $query1);
+
+    while ($row = mysqli_fetch_array($result)) 
+    {
+      echo 'Do you ' . $row['verb'] . ' your ' . $row['adj'] . ' ' . $row['noun'] . ' ' . $row['adverb'] . "? That's hilarious!";
+      echo '<br />';      
+    }
+  }  
 if ($output_form)
 {
 ?>
@@ -52,37 +73,19 @@ if ($output_form)
   <p>Play Mad-libs!</p>
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <label for="noun">Enter a noun: </label>
-    <input type="text" id="noun" name="noun" /><br />
+    <input type="text" id="noun" name="noun" value = "<?php echo $noun; ?>" /><br />
     <label for="verb">Enter a verb: </label>
-    <input type="text" id="verb" name="verb" /><br />
+    <input type="text" id="verb" name="verb" value = "<?php echo $verb; ?>"/><br />
     <label for="adj">Enter an adjective: </label>
-    <input type="text" id="adj" name="adj" /><br />
+    <input type="text" id="adj" name="adj" value = "<?php echo $adj; ?>"/><br />
     <label for="adverb">Enter an adverb: </label>
-    <input type="text" id ="adverb" name= "adverb" /><br />
+    <input type="text" id ="adverb" name= "adverb" value = "<?php echo $adverb; ?>"/><br />
     <input type="submit" name="submit" value="Submit" />
     
   </form>
 <?php
 }
-  if((!empty($noun)) && (!empty($verb)) && (!empty($adj)) && (!empty($adverb)))
-  {
-    $query = "insert into madlibs(madlib_sk, noun, verb, adj, adverb) values ((select count(*) + 1 from madlibs),'$noun', '$verb', '$adj', '$adverb');";
-    
-    mysqli_query($dbc, $query)
-      or die('Error querying database.');
-    $output_form = true;
-    
-  } 
-    $query1 = "select * from madlibs order by madlib_sk desc;";
-    $result = mysqli_query($dbc, $query1);
-    $arraycount = 0;
-    
-    while ($row = mysqli_fetch_array($result)) 
-    {
-      echo 'Do you ' . $row['verb'] . ' your ' . $row['adj'] . ' ' . $row['noun'] . ' ' . $row['adverb'] . "? That's hilarious!";
-      echo '<br />';      
-      $arraycount++;
-    }
+
 
   mysqli_close($dbc);
   
