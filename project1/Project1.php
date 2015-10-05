@@ -45,11 +45,10 @@ else
 }
   if((!empty($noun)) && (!empty($verb)) && (!empty($adj)) && (!empty($adverb)))
   {
-    $rowcount = "select count(*) + 1 from madlibs";
-    mysqli_query($dbc, $rowcount)
-      or die('Error querying database row.');
-      $rowcount = mysqli_fetch_array($rowcount);
-   // echo $rowcount;  
+
+    $query2 = mysqli_query($dbc, "Select * from madlibs");
+    $rowcount = mysqli_num_rows($query2) + 1;
+    
     $query = "insert into madlibs(madlib_sk, noun, verb, adj, adverb) values ('$rowcount','$noun', '$verb', '$adj', '$adverb');";
     
     mysqli_query($dbc, $query)
@@ -70,7 +69,7 @@ if ($output_form)
 ?>
 <body>
 
-  <p>Play Mad-libs!</p>
+  <p><font size ="3" color="red">Play Mad-libs!</font></p>
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <label for="noun">Enter a noun: </label>
     <input type="text" id="noun" name="noun" value = "<?php echo $noun; ?>" /><br />
