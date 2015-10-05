@@ -13,28 +13,28 @@ if (isset($_POST['submit']))
 {
   if (empty($noun) && empty($verb) && empty($adj) && empty($adverb))
   {
-   echo 'All of your fields are empty, please fill in all fields. <br />';
+   echo '<font size ="4" color="red">All of your fields are empty, please fill in all fields. </font><br />';
    $output_form = true;
   }
   
   else if (empty($noun))
   {
-    echo 'Fill in the noun field';
+    echo '<font size ="4" color="red">Fill in the noun field</font>';
     $output_form = true;
   }
   else if (empty($verb))
   {
-    echo 'Fill in the verb field';
+    echo '<font size ="4" color="red">Fill in the verb field</font>';
     $output_form = true;
   }
   else if (empty($adj))
   {
-    echo 'Fill in the adjective field';
+    echo '<font size ="4" color="red">Fill in the adjective field</font>';
     $output_form = true;
   }
   else if (empty($adverb))
   {
-    echo 'Fill in the adverb field';
+    echo '<font size ="4" color="red">Fill in the adverb field</font>';
     $output_form = true;
   }
   
@@ -60,7 +60,7 @@ else
 
     while ($row = mysqli_fetch_array($result)) 
     {
-      echo 'Do you ' . $row['verb'] . ' your ' . $row['adj'] . ' ' . $row['noun'] . ' ' . $row['adverb'] . "? That's hilarious!";
+      echo '<font size ="3" color="green">Do you ' . $row['verb'] . ' your ' . $row['adj'] . ' ' . $row['noun'] . ' ' . $row['adverb'] . "? That's hilarious!</font>";
       echo '<br />';      
     }
   }  
@@ -69,15 +69,15 @@ if ($output_form)
 ?>
 <body>
 
-  <p><font size ="3" color="red">Play Mad-libs!</font></p>
+  <p><font size ="5" color="blue">Play Mad-libs!</font></p>
   <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <label for="noun">Enter a noun: </label>
+    <label for="noun"><font face ="verdana" size ="4" color="pink">Enter a noun: </font></label>
     <input type="text" id="noun" name="noun" value = "<?php echo $noun; ?>" /><br />
-    <label for="verb">Enter a verb: </label>
+    <label for="verb"><font face ="verdana" size ="4" color="pink">Enter a verb: </font></label>
     <input type="text" id="verb" name="verb" value = "<?php echo $verb; ?>"/><br />
-    <label for="adj">Enter an adjective: </label>
+    <label for="adj"><font face ="verdana" size ="4" color="pink">Enter an adjective: </font></label>
     <input type="text" id="adj" name="adj" value = "<?php echo $adj; ?>"/><br />
-    <label for="adverb">Enter an adverb: </label>
+    <label for="adverb"><font face ="verdana" size ="4" color="pink">Enter an adverb:</font> </label>
     <input type="text" id ="adverb" name= "adverb" value = "<?php echo $adverb; ?>"/><br />
     <input type="submit" name="submit" value="Submit" />
     
