@@ -10,23 +10,32 @@
   <h2>Guitar Wars - Add Your High Score</h2>
 
 <?php
-  if (isset($_POST['submit'])) {
+  
+  define('GW_UPLOADPATH', 'images/');
+  if (isset($_POST['submit'])) 
+  {
     // Grab the score data from the POST
     $name = $_POST['name'];
     $score = $_POST['score'];
-
-    if (!empty($name) && !empty($score)) {
+    $screenshot = $_files['screenshot']['name'];
+    
+    if (!empty($name) && !empty($score) && !empty($screenshot)) 
+    {
+      //Move the file to the target upload folder
+      $target = GW_UPLOADPATH . $screenshot;
+      
       // Connect to the database
       $dbc = mysqli_connect('localhost', 'bdrasmussen', 'root', 'gwdb');
 
       // Write the data to the database
-      $query = "INSERT INTO guitarwars VALUES (0, NOW(), '$name', '$score')";
+      $query = "INSERT INTO guitarwars VALUES (0, NOW(), '$name', '$score', '$screenshot')";
       mysqli_query($dbc, $query);
 
       // Confirm success with the user
       echo '<p>Thanks for adding your new high score!</p>';
       echo '<p><strong>Name:</strong> ' . $name . '<br />';
       echo '<strong>Score:</strong> ' . $score . '</p>';
+      echo '<img = "'.GW_UPLOADPATH . $screenshot . $screenshot . '" alt = "Score image" /></p>';
       echo '<p><a href="index.php">&lt;&lt; Back to high scores</a></p>';
 
       // Clear the score data to clear the form
@@ -35,7 +44,8 @@
 
       mysqli_close($dbc);
     }
-    else {
+    else 
+    {
       echo '<p class="error">Please enter all of the information to add your high score.</p>';
     }
   }
