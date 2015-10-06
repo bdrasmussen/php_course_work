@@ -1,14 +1,25 @@
-.error {
+.error 
+{
   font-weight: bold;
   color: #FF0000;
 }
 
-.score {
+.topscoreheader 
+{
+  text-align: center;
+  font-size: 200%;
+  background-color: #36407F;
+  color: #FFFFFF;
+}
+
+.score 
+{
   font-size:150%;
   color: #36407F;
 }
 
-.scoreinfo {
+.scoreinfo 
+{
   vertical-align: top;
   padding-right:15px;
 }

@@ -10,18 +10,24 @@
   <hr />
 
 <?php
-  define('GW_UPLOADPATH', 'images/');
-  // Connect to the database 
-  $dbc = mysqli_connect('localhost', 'bdrasmussen', 'root', 'gwdb');
+  require_once('appvars.php');
+  require_once('connectvars.php');
+  $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
   // Retrieve the score data from MySQL
-  $query = "SELECT * FROM guitarwars";
+  $query = "SELECT * FROM guitarwars order by score desc, date asc";
   $data = mysqli_query($dbc, $query);
 
   // Loop through the array of score data, formatting it as HTML 
   echo '<table>';
+  $i = 0;
   while ($row = mysqli_fetch_array($data)) { 
     // Display the score data
+    if ($i ==0)
+    {
+      echo '<tr><td colspan = "2" class = "topscoreheader">Top Score: ' .
+      $row['score'] . '</td></tr>';
+    }
     echo '<tr><td class="scoreinfo">';
     echo '<span class="score">' . $row['score'] . '</span><br />';
     echo '<strong>Name:</strong> ' . $row['name'] . '<br />';
@@ -34,6 +40,7 @@
     {
       echo '<td><img src = " ' . GW_UPLOADPATH .'unverified.gif" alt = "Unverified score" /></td></tr>';
     }
+    $i++;
   }
   echo '</table>';
 
