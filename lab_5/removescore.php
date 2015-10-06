@@ -14,6 +14,7 @@
   if (isset($_GET['id']) && isset($_GET['date']) && isset($_GET['name']) && isset($_GET['score']) && isset($_GET['screenshot']))
   {
     // Grab the score data from the GET
+    
     $id = $_GET['id'];
     $date = $_GET['date'];
     $name = $_GET['name'];
