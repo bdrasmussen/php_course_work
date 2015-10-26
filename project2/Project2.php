@@ -1,10 +1,3 @@
-<?php
-    $weight = $_POST['weight'];
-    $height = $_POST['height'];
-
-
-?>
-
 <body>
 
     <p><font size ="5" color="blue">Body Mass Index Calculator</font></p>
@@ -21,6 +14,9 @@
 </body>
 
 <?php
+
+    $weight = $_POST['weight'];
+    $height = $_POST['height'];
 
 if (isset($_POST['submit']))
 {
