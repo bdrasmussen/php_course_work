@@ -1,10 +1,8 @@
 <?php
     $weight = $_POST['weight'];
     $height = $_POST['height'];
-    $display_form = true;
 
-if ($display_form)
-{
+
 ?>
 
 <body>
@@ -23,40 +21,33 @@ if ($display_form)
 </body>
 
 <?php
-}
 
 if (isset($_POST['submit']))
 {
     if (empty($weight) && empty($height))
     {
         echo '<font size ="4" color="red">All of your fields are empty, please fill in all fields. </font><br />';
-        $display_form = true;
     }
   
     else if (empty($weight))
     {
         echo '<font size ="4" color="red">Fill in the weight</font>';
-        $display_form = true;
     }
     else if (empty($height))
     {
         echo '<font size ="4" color="red">Fill in the height</font>';
-        $output_form = true;
     }
     else if (!is_numeric($height))
     {
         echo '<font size ="4" color="red">Height must be a number in inches</font>';
-        $output_form = true;
     }
     else if (!is_numeric($weight))
     {
         echo '<font size ="4" color="red">Weight must be a number in pounds</font>';
-        $output_form = true;
     }
     else if (($weight <= 0) || ($height <= 0))
     {
         echo '<font size ="4" color="red">Please enter a value greater than zero</font>';
-        $output_form = true;
     }
     else
     {
@@ -74,7 +65,6 @@ if (isset($_POST['submit']))
         {
             echo '<font size ="4" color = "green">You are in the correct weight range.</font>'; 
         }
-        $display_form = true;
     }
 }
 ?>
