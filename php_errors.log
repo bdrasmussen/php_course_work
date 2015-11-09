@@ -1,0 +1,12 @@
+[07-Oct-2015 03:27:36 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 16
+[07-Oct-2015 03:27:36 UTC] PHP Stack trace:
+[07-Oct-2015 03:27:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
+[07-Oct-2015 03:27:36 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:16
+[07-Oct-2015 03:27:36 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 17
+[07-Oct-2015 03:27:36 UTC] PHP Stack trace:
+[07-Oct-2015 03:27:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
+[07-Oct-2015 03:27:36 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:17
+[07-Oct-2015 03:27:36 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 18
+[07-Oct-2015 03:27:36 UTC] PHP Stack trace:
+[07-Oct-2015 03:27:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
+[07-Oct-2015 03:27:36 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:18
