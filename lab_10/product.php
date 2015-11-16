@@ -1,11 +1,10 @@
 <?php
-    require_once(contectvars.php);
     
     class Product
     {
-        private $title;
-        private $description;
-        private $price;
+        protected $title;
+        protected $description;
+        protected $price;
         
         public function setTitle($title)
         {

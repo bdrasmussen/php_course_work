@@ -1,8 +1,11 @@
 <?php
     
+    require_once('product.php');
+    require_once('tools.php');
+    
     class Electronics extends Product
     {
-        private $recyclable;
+        protected $recyclable;
         
         public function setRecyclable($recyclable)
         {

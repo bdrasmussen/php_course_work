@@ -1,9 +1,12 @@
 <?php
 
+    require_once('product.php');
+    require_once('electronics.php');
+
     class Tools extends Product
     {
-        private $shipper;
-        private $weight;
+        protected $shipper;
+        protected $weight;
         
         public function setShipper($shipper)
         {
