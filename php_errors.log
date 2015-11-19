@@ -1,12 +1,206 @@
-[07-Oct-2015 03:27:36 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 16
-[07-Oct-2015 03:27:36 UTC] PHP Stack trace:
-[07-Oct-2015 03:27:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
-[07-Oct-2015 03:27:36 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:16
-[07-Oct-2015 03:27:36 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 17
-[07-Oct-2015 03:27:36 UTC] PHP Stack trace:
-[07-Oct-2015 03:27:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
-[07-Oct-2015 03:27:36 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:17
-[07-Oct-2015 03:27:36 UTC] PHP Warning:  mysqli_real_escape_string() expects parameter 1 to be mysqli, null given in /home/ubuntu/workspace/php_course_work/lab_6/addscore.php on line 18
-[07-Oct-2015 03:27:36 UTC] PHP Stack trace:
-[07-Oct-2015 03:27:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:0
-[07-Oct-2015 03:27:36 UTC] PHP   2. mysqli_real_escape_string() /home/ubuntu/workspace/php_course_work/lab_6/addscore.php:18
+[09-Nov-2015 04:17:44 UTC] PHP Warning:  mysqli_connect(): (HY000/1049): Unknown database 'Madlibs' in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 113
+[09-Nov-2015 04:17:44 UTC] PHP Stack trace:
+[09-Nov-2015 04:17:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 04:17:44 UTC] PHP   2. mysqli_connect() /home/ubuntu/workspace/php_course_work/lab_9/index.php:113
+[09-Nov-2015 04:25:44 UTC] PHP Fatal error:  Cannot access private property Madlib::$noun in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 119
+[09-Nov-2015 04:25:44 UTC] PHP Stack trace:
+[09-Nov-2015 04:25:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 04:32:31 UTC] PHP Fatal error:  Cannot access empty property in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 13
+[09-Nov-2015 04:32:31 UTC] PHP Stack trace:
+[09-Nov-2015 04:32:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 04:32:31 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:119
+[09-Nov-2015 04:43:58 UTC] PHP Fatal error:  Cannot access empty property in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 20
+[09-Nov-2015 04:43:58 UTC] PHP Stack trace:
+[09-Nov-2015 04:43:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 04:43:58 UTC] PHP   2. Madlib->output() /home/ubuntu/workspace/php_course_work/lab_9/index.php:121
+[09-Nov-2015 04:44:59 UTC] PHP Catchable fatal error:  Object of class Madlib could not be converted to string in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 20
+[09-Nov-2015 04:44:59 UTC] PHP Stack trace:
+[09-Nov-2015 04:44:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 04:44:59 UTC] PHP   2. Madlib->output() /home/ubuntu/workspace/php_course_work/lab_9/index.php:121
+[09-Nov-2015 05:02:24 UTC] PHP Fatal error:  Cannot access empty property in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 12
+[09-Nov-2015 05:02:24 UTC] PHP Stack trace:
+[09-Nov-2015 05:02:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 05:02:24 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:119
+[09-Nov-2015 05:04:21 UTC] PHP Fatal error:  Cannot access empty property in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 12
+[09-Nov-2015 05:04:21 UTC] PHP Stack trace:
+[09-Nov-2015 05:04:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 05:04:21 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:119
+[09-Nov-2015 05:10:47 UTC] PHP Fatal error:  Cannot access empty property in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 13
+[09-Nov-2015 05:10:47 UTC] PHP Stack trace:
+[09-Nov-2015 05:10:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 05:10:47 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:119
+[09-Nov-2015 05:34:19 UTC] PHP Catchable fatal error:  Object of class Madlib could not be converted to string in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 20
+[09-Nov-2015 05:34:19 UTC] PHP Stack trace:
+[09-Nov-2015 05:34:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 05:34:19 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:118
+[09-Nov-2015 05:57:16 UTC] PHP Warning:  Missing argument 1 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 5 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 05:57:16 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:16 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:5
+[09-Nov-2015 05:57:16 UTC] PHP Warning:  Missing argument 2 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 5 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 05:57:16 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:16 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:5
+[09-Nov-2015 05:57:16 UTC] PHP Warning:  Missing argument 3 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 5 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 05:57:16 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:16 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:5
+[09-Nov-2015 05:57:16 UTC] PHP Warning:  Missing argument 4 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 5 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 05:57:16 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:16 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:5
+[09-Nov-2015 05:57:16 UTC] PHP Warning:  mysqli_query(): Empty query in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 32
+[09-Nov-2015 05:57:16 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:16 UTC] PHP   2. Madlib->output() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:7
+[09-Nov-2015 05:57:16 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php:32
+[09-Nov-2015 05:57:16 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 34
+[09-Nov-2015 05:57:16 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:16 UTC] PHP   2. Madlib->output() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:7
+[09-Nov-2015 05:57:16 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php:34
+[09-Nov-2015 05:57:20 UTC] PHP Warning:  Missing argument 1 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 5 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 05:57:20 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:20 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:5
+[09-Nov-2015 05:57:20 UTC] PHP Warning:  Missing argument 2 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 5 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 05:57:20 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:20 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:5
+[09-Nov-2015 05:57:20 UTC] PHP Warning:  Missing argument 3 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 5 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 05:57:20 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:20 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:5
+[09-Nov-2015 05:57:20 UTC] PHP Warning:  Missing argument 4 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 5 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 05:57:20 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:20 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:5
+[09-Nov-2015 05:57:20 UTC] PHP Warning:  mysqli_query(): Empty query in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 32
+[09-Nov-2015 05:57:20 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:20 UTC] PHP   2. Madlib->output() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:7
+[09-Nov-2015 05:57:20 UTC] PHP   3. mysqli_query() /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php:32
+[09-Nov-2015 05:57:20 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 34
+[09-Nov-2015 05:57:20 UTC] PHP Stack trace:
+[09-Nov-2015 05:57:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:57:20 UTC] PHP   2. Madlib->output() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:7
+[09-Nov-2015 05:57:20 UTC] PHP   3. mysqli_fetch_array() /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php:34
+[09-Nov-2015 05:58:18 UTC] PHP Warning:  require_once(connectvarsphp): failed to open stream: No such file or directory in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 2
+[09-Nov-2015 05:58:18 UTC] PHP Stack trace:
+[09-Nov-2015 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:58:18 UTC] PHP Fatal error:  require_once(): Failed opening required 'connectvarsphp' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 2
+[09-Nov-2015 05:58:18 UTC] PHP Stack trace:
+[09-Nov-2015 05:58:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:58:44 UTC] PHP Warning:  mysqli_query(): Empty query in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 7
+[09-Nov-2015 05:58:44 UTC] PHP Stack trace:
+[09-Nov-2015 05:58:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:58:44 UTC] PHP   2. mysqli_query() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:7
+[09-Nov-2015 05:58:44 UTC] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/ubuntu/workspace/php_course_work/lab_9/Display.php on line 9
+[09-Nov-2015 05:58:44 UTC] PHP Stack trace:
+[09-Nov-2015 05:58:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:0
+[09-Nov-2015 05:58:44 UTC] PHP   2. mysqli_fetch_array() /home/ubuntu/workspace/php_course_work/lab_9/Display.php:9
+[09-Nov-2015 06:03:33 UTC] PHP Fatal error:  Call to a member function output() on a non-object in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 123
+[09-Nov-2015 06:03:33 UTC] PHP Stack trace:
+[09-Nov-2015 06:03:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 23:56:36 UTC] PHP Fatal error:  Call to a member function output() on a non-object in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133
+[09-Nov-2015 23:56:36 UTC] PHP Stack trace:
+[09-Nov-2015 23:56:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 23:57:05 UTC] PHP Warning:  Missing argument 1 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 23:57:05 UTC] PHP Stack trace:
+[09-Nov-2015 23:57:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 23:57:05 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[09-Nov-2015 23:57:05 UTC] PHP Warning:  Missing argument 2 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 23:57:05 UTC] PHP Stack trace:
+[09-Nov-2015 23:57:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 23:57:05 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[09-Nov-2015 23:57:05 UTC] PHP Warning:  Missing argument 3 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 23:57:05 UTC] PHP Stack trace:
+[09-Nov-2015 23:57:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 23:57:05 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[09-Nov-2015 23:57:05 UTC] PHP Warning:  Missing argument 4 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[09-Nov-2015 23:57:05 UTC] PHP Stack trace:
+[09-Nov-2015 23:57:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[09-Nov-2015 23:57:05 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[09-Nov-2015 23:58:10 UTC] PHP Fatal error:  Cannot redeclare Madlib::__construct() in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 25
+[09-Nov-2015 23:58:10 UTC] PHP Stack trace:
+[09-Nov-2015 23:58:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[10-Nov-2015 00:00:59 UTC] PHP Warning:  Missing argument 1 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[10-Nov-2015 00:00:59 UTC] PHP Stack trace:
+[10-Nov-2015 00:00:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[10-Nov-2015 00:00:59 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[10-Nov-2015 00:00:59 UTC] PHP Warning:  Missing argument 2 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[10-Nov-2015 00:00:59 UTC] PHP Stack trace:
+[10-Nov-2015 00:00:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[10-Nov-2015 00:00:59 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[10-Nov-2015 00:00:59 UTC] PHP Warning:  Missing argument 3 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[10-Nov-2015 00:00:59 UTC] PHP Stack trace:
+[10-Nov-2015 00:00:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[10-Nov-2015 00:00:59 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[10-Nov-2015 00:00:59 UTC] PHP Warning:  Missing argument 4 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[10-Nov-2015 00:00:59 UTC] PHP Stack trace:
+[10-Nov-2015 00:00:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[10-Nov-2015 00:00:59 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[10-Nov-2015 00:01:30 UTC] PHP Warning:  Missing argument 1 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[10-Nov-2015 00:01:30 UTC] PHP Stack trace:
+[10-Nov-2015 00:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[10-Nov-2015 00:01:30 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[10-Nov-2015 00:01:30 UTC] PHP Warning:  Missing argument 2 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[10-Nov-2015 00:01:30 UTC] PHP Stack trace:
+[10-Nov-2015 00:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[10-Nov-2015 00:01:30 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[10-Nov-2015 00:01:30 UTC] PHP Warning:  Missing argument 3 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[10-Nov-2015 00:01:30 UTC] PHP Stack trace:
+[10-Nov-2015 00:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[10-Nov-2015 00:01:30 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[10-Nov-2015 00:01:30 UTC] PHP Warning:  Missing argument 4 for Madlib::__construct(), called in /home/ubuntu/workspace/php_course_work/lab_9/index.php on line 133 and defined in /home/ubuntu/workspace/php_course_work/lab_9/madlibs.php on line 11
+[10-Nov-2015 00:01:30 UTC] PHP Stack trace:
+[10-Nov-2015 00:01:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_9/index.php:0
+[10-Nov-2015 00:01:30 UTC] PHP   2. Madlib->__construct() /home/ubuntu/workspace/php_course_work/lab_9/index.php:133
+[16-Nov-2015 21:21:09 UTC] PHP Warning:  require_once(electronic.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/php_course_work/lab_10/addProduct.php on line 85
+[16-Nov-2015 21:21:09 UTC] PHP Stack trace:
+[16-Nov-2015 21:21:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/addProduct.php:0
+[16-Nov-2015 21:21:09 UTC] PHP Fatal error:  require_once(): Failed opening required 'electronic.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/php_course_work/lab_10/addProduct.php on line 85
+[16-Nov-2015 21:21:09 UTC] PHP Stack trace:
+[16-Nov-2015 21:21:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/addProduct.php:0
+[16-Nov-2015 21:22:37 UTC] PHP Warning:  require_once(electronic.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/php_course_work/lab_10/addProduct.php on line 88
+[16-Nov-2015 21:22:37 UTC] PHP Stack trace:
+[16-Nov-2015 21:22:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/addProduct.php:0
+[16-Nov-2015 21:22:37 UTC] PHP Fatal error:  require_once(): Failed opening required 'electronic.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/php_course_work/lab_10/addProduct.php on line 88
+[16-Nov-2015 21:22:37 UTC] PHP Stack trace:
+[16-Nov-2015 21:22:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/addProduct.php:0
+[16-Nov-2015 21:48:12 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/php_course_work/lab_10/addProduct.php on line 55
+[16-Nov-2015 21:48:17 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/php_course_work/lab_10/addProduct.php on line 55
+[16-Nov-2015 21:48:28 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/php_course_work/lab_10/addProduct.php on line 55
+[16-Nov-2015 23:02:10 UTC] PHP Fatal error:  Call to undefined function setRecyclable() in /home/ubuntu/workspace/php_course_work/lab_10/commit.php on line 20
+[16-Nov-2015 23:02:10 UTC] PHP Stack trace:
+[16-Nov-2015 23:02:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/commit.php:0
+[16-Nov-2015 23:05:11 UTC] PHP Fatal error:  Call to undefined function setRecyclable() in /home/ubuntu/workspace/php_course_work/lab_10/commit.php on line 20
+[16-Nov-2015 23:05:11 UTC] PHP Stack trace:
+[16-Nov-2015 23:05:11 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/commit.php:0
+[16-Nov-2015 23:08:56 UTC] PHP Fatal error:  Call to undefined function setRecyclable() in /home/ubuntu/workspace/php_course_work/lab_10/commit.php on line 20
+[16-Nov-2015 23:08:56 UTC] PHP Stack trace:
+[16-Nov-2015 23:08:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/commit.php:0
+[16-Nov-2015 23:10:13 UTC] PHP Fatal error:  Call to undefined function setRecyclable() in /home/ubuntu/workspace/php_course_work/lab_10/commit.php on line 20
+[16-Nov-2015 23:10:13 UTC] PHP Stack trace:
+[16-Nov-2015 23:10:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/commit.php:0
+[16-Nov-2015 23:14:50 UTC] PHP Fatal error:  Call to undefined function setRecyclable() in /home/ubuntu/workspace/php_course_work/lab_10/commit.php on line 20
+[16-Nov-2015 23:14:50 UTC] PHP Stack trace:
+[16-Nov-2015 23:14:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/commit.php:0
+[16-Nov-2015 23:17:43 UTC] PHP Fatal error:  Call to undefined function setRecyclable() in /home/ubuntu/workspace/php_course_work/lab_10/commit.php on line 20
+[16-Nov-2015 23:17:43 UTC] PHP Stack trace:
+[16-Nov-2015 23:17:43 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/commit.php:0
+[16-Nov-2015 23:19:49 UTC] PHP Fatal error:  Call to undefined method Electronics::setWeight() in /home/ubuntu/workspace/php_course_work/lab_10/commit.php on line 21
+[16-Nov-2015 23:19:49 UTC] PHP Stack trace:
+[16-Nov-2015 23:19:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/commit.php:0
+[16-Nov-2015 23:20:50 UTC] PHP Fatal error:  Call to undefined method Electronics::setWeight() in /home/ubuntu/workspace/php_course_work/lab_10/commit.php on line 21
+[16-Nov-2015 23:20:50 UTC] PHP Stack trace:
+[16-Nov-2015 23:20:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/commit.php:0
+[16-Nov-2015 23:29:51 UTC] PHP Fatal error:  Call to undefined method Electronics::setWeight() in /home/ubuntu/workspace/php_course_work/lab_10/commit.php on line 24
+[16-Nov-2015 23:29:51 UTC] PHP Stack trace:
+[16-Nov-2015 23:29:51 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/commit.php:0
+[17-Nov-2015 00:23:05 UTC] PHP Fatal error:  Call to undefined method Product::setRecyclable() in /home/ubuntu/workspace/php_course_work/lab_10/commit.php on line 44
+[17-Nov-2015 00:23:05 UTC] PHP Stack trace:
+[17-Nov-2015 00:23:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/commit.php:0
+[17-Nov-2015 00:24:50 UTC] PHP Fatal error:  Call to undefined method Product::setRecyclable() in /home/ubuntu/workspace/php_course_work/lab_10/commit.php on line 44
+[17-Nov-2015 00:24:50 UTC] PHP Stack trace:
+[17-Nov-2015 00:24:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/php_course_work/lab_10/commit.php:0

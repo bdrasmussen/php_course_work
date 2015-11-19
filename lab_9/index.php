@@ -104,6 +104,12 @@
                   <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
                 </div>
               </div>
+              
+              <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                  <button type="submit" name="existing" value="existing" class="btn btn-primary">Show existing Madlibs</button>
+                </div>
+              </div>
             </fieldset>
           </form>
         </div>
@@ -119,6 +125,12 @@
     if (isset($_POST['submit']))
     {
         $mad = new Madlib($_POST['noun'],$_POST['verb'],$_POST['adjective'],$_POST['adverb'] );
+        $mad->output();
+    }
+    
+    if (isset($_POST['existing']))
+    {
+        $mad = new Madlib('existing', 'existing', 'existing', 'existing');
         $mad->output();
     }
         

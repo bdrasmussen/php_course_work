@@ -10,19 +10,24 @@ class Madlib
   
   function __construct($n,$v,$adj,$ad)
   {
+    if (($n != 'existing' ) && ($v != 'existing') && ($adj != 'existing') && ($ad != 'existing'))
+    {
     $this->noun = $n;
     $this->verb = $v;
     $this->adjective = $adj;
     $this->adverb = $ad;
     $this->story = 'Do you ' . $this->verb . ' your ' . $this->adjective . ' ' . $this->noun . ' ' . $this->adverb . "? How hilarious!";
+    
+
     $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
         or die('Error connecting to MySQL server.');
     $query = "insert into Madlibs(Story, Noun, Verb, Adjective, Adverb) values ('$this->story', '$this->noun', '$this->verb', '$this->adjective', '$this->adverb');";
     
     mysqli_query($dbc, $query)
         or die('Error querying database.');
+    }
   }
-  
+
   public function output()
   {
     $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
@@ -32,7 +37,7 @@ class Madlib
 
     while ($row = mysqli_fetch_array($result)) 
     {
-        echo $row['story'];
+        echo '<font color = blue size = 4>' . $row['story'] . '</font>';
         echo '<br />';
     }
  

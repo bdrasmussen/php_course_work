@@ -155,25 +155,6 @@
                                             <div class="col-lg-10">
                                                 <input type="text" class="form-control" name="price" id="price" >
                                             </div>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="shipping" class="col-lg-2 control-label">Choose shipping type:</label>
-                                        <div class ="col-lg-10">
-                                            <form action="">
-                                                <input type="radio" name="shipping" value="USPS">USPS<br>
-                                                <input type="radio" name="shipping" value="UPS">UPS<br>
-                                                <input type="radio" name="shipping" value="FedEX">FedEX
-                                            </form>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="weight" class="col-lg-2 control-label">Weight:</label>
-                                            <div class="col-lg-10">
-                                                <input type="text" class="form-control" name="weight" id="weight" >
-                                            </div>
-                                    </div>
                                     
                                     <div class="form-group">
                                         <label for="recyclable" class="col-lg-2 control-label">Recyclable?:</label>
