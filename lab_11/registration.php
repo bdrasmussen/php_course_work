@@ -51,7 +51,7 @@
             }
         }
 
-        if (!preg_match('/^\(?[2-9]\d{2}\)?[-\s]\d{3}-\d{4}$/', $phone)) 
+        if (!preg_match('/^\(?[2-9]\d{2}\)?[-\s]?\d{3}-\d{4}$/', $phone)) 
         {
             echo '<p class="error">Your phone number is invalid.</p>';
             $output_form = 'yes';
@@ -114,6 +114,7 @@
         $replacement = '';
         $new_phone = preg_replace($pattern, $replacement, $phone);
         echo 'Your phone number has been registered as ' . $new_phone . '.</p>';
+        
     }
 ?>
 
