@@ -34,9 +34,9 @@
 
     <div class="container">
         <div class="row">
-             <form class="form-horizontal" action="addentry.php" method="post" role="form">
+             <form class="form-horizontal" action="project3.php" method="post" role="form">
                 <fieldset>
-                    <legend>Ben's Blog</legend>                   
+                    <legend>Ben's Blog Admin Page</legend>                   
                         <div class="form-group">
                             <label for="type" class="col-lg-2 control-label">Blog entries:</label>
                             <div class="col-lg-5">
@@ -47,10 +47,12 @@
                             
                                 while ($row = mysqli_fetch_array($result)) 
                                 {
-                                    echo '<div class = "col-lg-10">Posted by: '. $row['username'] . ' on ' . $row['date'] . "</div>";
+                                    echo '<a href = "deleteentry.php?id=' . $row['id'] . '">Remove</a><br />';
+                                    echo '<div class = "col-lg-10">Posted by: '. $row['username'] . ' on ' . $row['date'] . '</div>';
                                     echo '<br />';
                                     echo '<h3>' . $row['entry'] . '</h3>';
                                     echo '<br />';
+
                                 }
                             
                             ?>        
@@ -58,7 +60,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" name="submit" value="submit" class="btn btn-primary">Create a Blog Entry</button>
+                                <button type="submit" name="submit" value="submit" class="btn btn-primary">Back to main page </button>
                             </div>
                         </div>
                 </fieldset>

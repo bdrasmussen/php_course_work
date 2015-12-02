@@ -1,0 +1,1 @@
+create table blogentries (id int(10) not null auto_increment, username varchar(30), public int(1), entry longtext, date date, primary key (id));

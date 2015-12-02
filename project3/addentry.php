@@ -1,10 +1,3 @@
-<?php
-    require_once('connectvars.php');
-    
-    $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
-        or die('Error connecting to MySQL server.');
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,34 +24,29 @@
 </head>
 
 <body>
-
+    
     <div class="container">
         <div class="row">
-             <form class="form-horizontal" action="addentry.php" method="post" role="form">
+             <form class="form-horizontal" action="post.php" method="post" role="form">
                 <fieldset>
                     <legend>Ben's Blog</legend>                   
                         <div class="form-group">
-                            <label for="type" class="col-lg-2 control-label">Blog entries:</label>
-                            <div class="col-lg-5">
-                            <?php
-
-                                $query1 = "select * from blogentries order by id desc;";
-                                $result = mysqli_query($dbc, $query1);
-                            
-                                while ($row = mysqli_fetch_array($result)) 
-                                {
-                                    echo '<div class = "col-lg-10">Posted by: '. $row['username'] . ' on ' . $row['date'] . "</div>";
-                                    echo '<br />';
-                                    echo '<h3>' . $row['entry'] . '</h3>';
-                                    echo '<br />';
-                                }
-                            
-                            ?>        
-                            </div>
+                            <label for="entry" class="col-lg-2 control-label">Entry:</label>
+                                <div class="col-lg-10">
+                                    <textarea class="form-control" name="entry" id="entry" cols = "40" rows ="20"></textarea>
+                                </div>
                         </div>
+                        
+                        <div class="form-group">
+                            <label for="username" class="col-lg-2 control-label">Username:</label>
+                                <div class="col-lg-3">
+                                    <input type="text" class="form-control" name="username" id="username" >
+                                </div>
+                        </div>                        
+                        
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" name="submit" value="submit" class="btn btn-primary">Create a Blog Entry</button>
+                                <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
                             </div>
                         </div>
                 </fieldset>
