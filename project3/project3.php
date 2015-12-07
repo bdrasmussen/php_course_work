@@ -34,11 +34,11 @@
 
     <div class="container">
         <div class="row">
-             <form class="form-horizontal" action="addentry.php" method="post" role="form">
+             <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" role="form">
                 <fieldset>
                     <legend>Ben's Blog</legend>                   
                         <div class="form-group">
-                            <label for="type" class="col-lg-2 control-label">Blog entries:</label>
+                            <label for="type" class="col-lg-1 control-label">Blog entries:</label>
                             <div class="col-lg-5">
                             <?php
 
@@ -57,8 +57,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" name="submit" value="submit" class="btn btn-primary">Create a Blog Entry</button>
+                            <div class="col-lg-10 col-lg-offset-1">
+                                <button type="submit" name="blog" value="blog" class="btn btn-primary">Create a Blog Entry</button>
+                                <button type="submit" name="admin" value="admin" class="btn btn-primary">Admin Page</button>
                             </div>
                         </div>
                 </fieldset>
@@ -66,3 +67,37 @@
         </div>
     </div>
 </body>
+
+<?php
+    
+    if (isset($_POST['blog']))
+    {
+        
+        ?>
+        
+            <html>
+                <head>
+                    <title>IU Webmaster redirect</title>
+                    <META http-equiv="refresh" content="0;addentry.php">
+                </head>
+            </html>
+        <?php
+        
+    }
+
+    if (isset($_POST['admin']))
+    {
+        ?>
+        
+            <html>
+                <head>
+                    <title>IU Webmaster redirect</title>
+                    <META http-equiv="refresh" content="0;admin.php">
+                </head>
+            </html>
+        <?php
+        
+    }    
+    
+    
+?>

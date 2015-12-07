@@ -27,7 +27,7 @@
     
     <div class="container">
         <div class="row">
-             <form class="form-horizontal" action="post.php" method="post" role="form">
+             <form class="form-horizontal" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" role="form">
                 <fieldset>
                     <legend>Ben's Blog</legend>                   
                         <div class="form-group">
@@ -46,7 +46,8 @@
                         
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
-                                <button type="submit" name="submit" value="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" name="postentry" value="postentry" class="btn btn-primary">Post Entry</button>
+                                <button type="submit" name="back" value="back" class="btn btn-primary">Back to Home</button>
                             </div>
                         </div>
                 </fieldset>
@@ -54,3 +55,46 @@
         </div>
     </div>
 </body>
+
+<?php
+    require_once('connectvars.php');   
+    if (isset($_POST['postentry']))
+    {
+        $username = $_POST['username'];
+        $entry = $_POST['entry'];
+        $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
+            or die('Error connecting to MySQL server.');
+        $query = "insert into blogentries(username, public, entry, date) values ('$username', 0, '$entry', NOW());";
+            
+        mysqli_query($dbc, $query)
+            or die('Error querying database.');
+        ?>
+    
+        <html>
+            <head>
+                <title>IU Webmaster redirect</title>
+                <META http-equiv="refresh" content="1;project3.php">
+            </head>
+                <body bgcolor="#ffffff">
+                    <center>Your post entered correctly
+                </body>
+        </html>
+        <?php
+    }
+    if (isset($_POST['back']))
+    {
+        ?>
+        
+            <html>
+                <head>
+                    <title>IU Webmaster redirect</title>
+                    <META http-equiv="refresh" content="0;project3.php">
+                </head>
+            </html>
+        <?php
+        
+    }    
+    
+    
+    
+?>

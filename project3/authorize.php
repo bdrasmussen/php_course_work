@@ -24,25 +24,21 @@
 </head>
 
 <?php
-    require_once('connectvars.php');
-    
-    $id = $_GET['id'];
-        
-    $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
-        or die('Error connecting to MySQL server.');
-    $query = "DELETE FROM blogentries WHERE id = $id LIMIT 1";
-        
-    mysqli_query($dbc, $query)
-        or die('Error querying database.');
-        
-?>
+    $username = 'admin';
+    $password = 'admin';
 
-<html>
-    <head>
-        <title>IU Webmaster redirect</title>
-        <META http-equiv="refresh" content="2;admin.php">
-    </head>
-        <body bgcolor="#ffffff">
-            <center>Post removed
-        </body>
-</html>
+    if (!isset($_SERVER['PHP_AUTH_USER']) || !isset($_SERVER['PHP_AUTH_PW']) ||
+    ($_SERVER['PHP_AUTH_USER'] != $username) || ($_SERVER['PHP_AUTH_PW'] != $password)) 
+    {
+        header('HTTP/1.1 401 Unauthorized');
+        header('WWW-Authenticate: Basic realm="Ben Blog"');
+        exit('<h2>Ben Blog</h2><p>Sorry, you must enter a valid user name and password to access this page.</p>
+            <form class="form-horizontal" action="project3.php" method="post" role="form">
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <button type="submit" name="back" value="back" class="btn btn-primary">Back</button>
+                </div>
+            </div>
+            </form>');
+    }
+?>
