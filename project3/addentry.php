@@ -84,7 +84,6 @@
     if (isset($_POST['back']))
     {
         ?>
-        
             <html>
                 <head>
                     <title>IU Webmaster redirect</title>
