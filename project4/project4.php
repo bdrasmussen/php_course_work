@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Post - Start Bootstrap Template</title>
+    <title>Flickr Thumbnails</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/darkly/bootstrap.min.css" rel="stylesheet">
@@ -29,7 +29,7 @@
     
     if ($num_found > 0) 
     {
-        echo '<table><tr>';
+        echo '<table cellpadding = 20><tr>';
         for ($i = 0; $i < 20; $i++) 
         {
 
@@ -42,11 +42,11 @@
             $url = $attrs['href'];
             $attrs = $entry->content;
             
-            echo '<td><a href="' . $url . '">' . $title . '<img src="' . $attrs . '</a></td>';
+            echo '<td style = "width:200px"><a href="' . $url . '">' . $title . '<img src="' . $attrs . '</a></td>';
             
-            $newrow = $i/5;
+            $newrow = ($i+1)/5;
             
-            if ($newrow == 1 || $newrow == 2 || $newrow == 3)
+            if ($newrow == 1 || $newrow == 2 || $newrow == 3 || $newrow == 4)
             {
                 ?>
                 <tr></tr>
